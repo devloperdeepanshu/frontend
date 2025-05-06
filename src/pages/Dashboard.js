@@ -19,7 +19,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token"); // Get token from localStorage
 
       try {
-        if (user?.role === "recruiter") {
+        if (user?.role === "recruiter") { 
           // Fetch jobs posted by the recruiter
           const res = await fetch(`http://localhost:5000/api/jobs?recruiterId=${user.id}`);
           const data = await res.json();
